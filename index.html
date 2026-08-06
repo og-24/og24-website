@@ -671,7 +671,11 @@ body.intro-active .mouse-glow{opacity:0;}
   animation:scrolldrop 2s ease-in-out infinite;
 }
 @keyframes scrolldrop{0%{top:-100%;}100%{top:100%;}}
-
+@media (max-width: 768px) {
+  .scroll-indicator {
+    display: none !important;
+  }
+}
 /* ============================================================
    REVEAL
    ============================================================ */
