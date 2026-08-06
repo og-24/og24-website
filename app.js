@@ -407,7 +407,15 @@
       el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
     });
   }
-    
+    const aboutTyping = document.getElementById("aboutTyping");
+
+const texts = [
+`I'm Omar Ghanem, also known as OG24.
+
+An Egyptian competitive FPS player and content creator passionate about high-level gameplay, ranked competition, and entertaining the gaming community.
+
+Currently competing in Valorant, Call of Duty, PUBG, and FiveM.`
+];
 
 let charIndex = 0;
 
