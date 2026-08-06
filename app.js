@@ -45,12 +45,8 @@
   url: 'https://www.tiktok.com/@o.g24__',
   icon: `<path d="M14 3v10.5a3 3 0 1 1-2.2-2.9M14 3c.3 2.4 2 4.2 4.4 4.5" stroke-linecap="round" stroke-linejoin="round"/>`
 },
-{
-  name: 'Twitch',
-  handle: 'twitch.tv/og24__',
-  url: 'https://www.twitch.tv/og24__',
-  icon: `<path d="M6 3h14v10l-4 4h-4l-2 2v-2H6V3zm3 3v5m4-5v5" stroke-linecap="round" stroke-linejoin="round"/>`
-},
+
+  
 {
   name: 'PayPal',
   handle: 'paypal.me/OmarGhanem24',
