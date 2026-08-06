@@ -407,66 +407,25 @@
       el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
     });
   }
-  const aboutTyping = document.getElementById("aboutTyping");
+    
 
-const texts = [
-`I'm Omar Ghanem, also known as OG24.
-
-An Egyptian competitive FPS player and content creator passionate about high-level gameplay, ranked competition, and entertaining the gaming community.
-
-Currently competing in Valorant, Call of Duty, PUBG, and FiveM.`
-];
-
-let textIndex = 0;
 let charIndex = 0;
-let deleting = false;
 
-function typeLoop(){
+function typeLoop() {
+    const current = texts[0];
 
-    const current = texts[textIndex];
+    aboutTyping.innerHTML =
+        current.substring(0, charIndex).replace(/\n/g, "<br><br>") +
+        "<span class='cursor'>|</span>";
 
-    if(!deleting){
-
-        aboutTyping.innerHTML = current.substring(0,charIndex).replace(/\n/g,"<br><br>") + "<span class='cursor'>|</span>";
-
+    if (charIndex < current.length) {
         charIndex++;
-
-        if(charIndex > current.length){
-
-            deleting = true;
-
-            setTimeout(typeLoop,2000);
-
-            return;
-        }
-
-        setTimeout(typeLoop,18);
-
-    }else{
-
-        aboutTyping.innerHTML = current.substring(0,charIndex).replace(/\n/g,"<br><br>") + "<span class='cursor'>|</span>";
-
-        charIndex--;
-
-        if(charIndex < 0){
-
-            deleting = false;
-
-            textIndex++;
-
-            if(textIndex >= texts.length){
-                textIndex = 0;
-            }
-
-            setTimeout(typeLoop,600);
-
-            return;
-        }
-
-        setTimeout(typeLoop,8);
-
+        setTimeout(typeLoop, 18);
+    } else {
+        // بعد ما يخلص الكتابة، يشيل المؤشر ويقف
+        aboutTyping.innerHTML =
+            current.replace(/\n/g, "<br><br>");
     }
-
 }
 
 typeLoop();
